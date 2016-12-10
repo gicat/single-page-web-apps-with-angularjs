@@ -16,7 +16,9 @@
                     Phone number: {{myInfoCtrl.userInfo.phone}}
                 </div>
                 <div class="form-group">
-                    Favorite dish: {{myInfoCtrl.userInfo.favoriteDish}}
+                    Favorite dish: <h4>{{myInfoCtrl.userInfo.favoriteDish.name}} [{{myInfoCtrl.userInfo.favoriteDish.short_name}}]</h4>
+                    <p>{{ myInfoCtrl.userInfo.favoriteDish.description }}</p>
+                    <img ng-src="https://gcatal.herokuapp.com/images/{{myInfoCtrl.userInfo.favoriteDish.short_name}}.jpg" alt="{{myInfoCtrl.userInfo.favoriteDish.short_name}}" class="pull-right">
                 </div>
             </fieldset>
             <div ng-if="!myInfoCtrl.userInfo">

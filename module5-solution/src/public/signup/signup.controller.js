@@ -10,6 +10,8 @@ function RegistrationController(menuItems, UserService) {
 
   reg.submit = function () {
     reg.completed = true;
+    var favoriteDishParsed = JSON.parse(reg.user.favoriteDish);
+    reg.user.favoriteDish = favoriteDishParsed;
     UserService.saveUser(reg.user);
   };
 }

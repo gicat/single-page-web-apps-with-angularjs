@@ -38,7 +38,7 @@
                     <div class="form-group">
                         <label for="favoriteDish">Favorite dish:</label>
                         <select ng-model="regCtrl.user.favoriteDish" id="favoriteDish" class="form-control">
-                        <option ng-repeat="option in regCtrl.menuItems.menu_items" value="{{option.name}}">{{option.name}}</option>
+                        <option ng-repeat="option in regCtrl.menuItems.menu_items" value="{{option}}">{{option.name}}</option>
                         </select>
                     </div>
                     <button ng-disabled="regForm.$invalid" ng-click="regCtrl.submit()"class="btn btn-primary">Submit</button>
